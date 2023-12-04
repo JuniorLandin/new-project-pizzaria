@@ -1,4 +1,5 @@
 import express, { Request, Response, NextFunction } from "express";
+require('dotenv').config();
 import 'express-async-errors';
 import cors from 'cors';
 
@@ -33,4 +34,4 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 
 })
 
-app.listen(3333, ()=> console.log("Servidor Online!"))
+app.listen(5438, ()=> console.log("Servidor Online!"))
