@@ -20,6 +20,8 @@ import { FinishedOrderController } from "./controllers/order/FinishedOrderContro
 import uploadConfig from './config/multer'
 
 import { isAut } from "./middlewares/isAut";
+import { DeleteBtCategoryProductController } from "./controllers/product/DeleteByCategoryProductController";
+import { UpdateProductController } from "./controllers/product/UpdateProductController";
 
 const router = Router();
 
@@ -43,6 +45,8 @@ router.get('/category', isAut, new ListCategoryController().handle)
 router.post('/product', isAut, upload.single('file'), new CreateProductController().handle)
 
 router.get('/category/product', isAut, new ListByCategoryController().handle)
+router.delete('/category/product/:product_id', isAut, new DeleteBtCategoryProductController().handle)
+router.put('/category/product/:product_id', isAut, new UpdateProductController().handle)
 
 // -- ROTAS ORDER
 router.post('/order', isAut, new CreateOrderController().handle)

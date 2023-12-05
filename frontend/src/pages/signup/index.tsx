@@ -11,7 +11,7 @@ import { AuthContext } from '@/contexts/AuthContext'
 
 import Link from "next/link"
 
-import logoImg from '../../../public/logo.svg'
+import logoImg from '../../../src/assets/logoUnitri.png'
 import { toast } from 'react-toastify'
 
 export default function Signup() {
@@ -55,7 +55,7 @@ export default function Signup() {
         </Head>
         <div className={styles.containerCenter}>
 
-          <Image src={logoImg} alt="Logo Sujeito Pizzaria"/>
+          <Image src={logoImg} alt="Logo Sujeito Pizzaria" width={600} height={360}/>
 
 
           <div className={styles.login}>

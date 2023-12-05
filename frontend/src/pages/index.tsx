@@ -13,7 +13,7 @@ import Link from "next/link"
 
 import { canSSRGuest } from '@/utils/canSSRGuest'
 
-import logoImg from '../../public/logo.svg'
+import logoImg from '../../src/assets/logoUnitri.png'
 import { toast } from 'react-toastify'
 
 export default function Home() {
@@ -51,7 +51,7 @@ export default function Home() {
           <title>SujeitoPizza - Faça seu login</title>
         </Head>
         <div className={styles.containerCenter}>
-          <Image src={logoImg} alt="Logo Sujeito Pizzaria"/>
+          <Image src={logoImg} alt="Logo Sujeito Pizzaria" width={600} height={360}/>
           <div className={styles.login}>
             <h1>Faça seu login</h1>
             <form onSubmit={handleLogin}>

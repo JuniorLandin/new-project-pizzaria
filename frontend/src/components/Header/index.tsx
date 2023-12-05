@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import styles from './styles.module.scss'
 import Link from 'next/link'
+import LogoUnitri from '../../assets/LogoUnitriReto.png'
 
 import { FiLogOut } from 'react-icons/fi'
 
@@ -14,7 +15,7 @@ export function Header(){
         <header className={styles.headerContainer}>
             <div className={styles.headerContent}>
                 <Link legacyBehavior href='/dashboard'>
-                    <img src='/logo.svg' width={190} height={60}/>
+                    <img src={LogoUnitri.src} width={190} height={160}/>
                 </Link>
 
                 <nav className={styles.menuNav}>
@@ -24,6 +25,10 @@ export function Header(){
 
                     <Link legacyBehavior href='/product'>
                         <a>Cardapio</a>
+                    </Link>
+
+                    <Link legacyBehavior href='/products'>
+                        <a>Produtos</a>
                     </Link>
 
                     <button onClick={signOut}>
